@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work From Home Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <header>Work From Home</header>
+        <form id="wfh-form">
+            <!-- form fields -->
+            <div class="field name">
+                <label for="user_id">User ID</label>
+                <div class="input-area">
+                    <input type="text" id="user_id" name="user_id" placeholder="Enter User ID" required>
+                    <i class="icon fas fa-user"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">User ID can't be blank</div>
+            </div>
+            <div class="field from-date">
+                <label for="from-date">From Date</label>
+                <div class="input-area">
+                    <input type="date" id="from-date" name="from_date" placeholder="Enter From Date" required>
+                    <i class="icon fas fa-calendar-alt"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">From Date can't be blank</div>
+            </div>
+            <div class="field to-date">
+                <label for="to-date">To Date</label>
+                <div class="input-area">
+                    <input type="date" id="to-date" name="to_date" placeholder="Enter To Date" required>
+                    <i class="icon fas fa-calendar-alt"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">To Date can't be blank</div>
+            </div>
+            <div class="field reason">
+                <label for="reason">Reason</label>
+                <div class="input-area">
+                    <textarea id="reason" name="reason" placeholder="Enter Reason" required></textarea>
+                    <i class="icon fas fa-comment"></i>
+                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                </div>
+                <div class="error error-txt">Reason can't be blank</div>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Modals -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="errorMessage">Dates cannot be more than two days apart or consecutive.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
