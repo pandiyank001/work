@@ -22,7 +22,7 @@ migrate = Migrate(app, db)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USERNAME'] = 'pandiyank29112001@gmail.com'
-app.config['MAIL_PASSWORD'] = 'kclj gfru vdlc optr'
+app.config['MAIL_PASSWORD'] = ''
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 
